@@ -1,0 +1,20 @@
+name: Mock Developer Pipeline
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout App Code
+        uses: actions/checkout@v4
+
+      - name: Fake Build Step
+        run: |
+          echo "Building a virtual container..."
+          echo "IMAGE_TAG=mock-app-v1.0" >> $GITHUB_ENV
+
+      # This is where YOU (Security) come in
+      - name: Run Security Check
+        uses: Halimatcd/central-sec-script@main
+        with:
+          image_name: ${{ env.IMAGE_TAG }}
