@@ -18,3 +18,4 @@ jobs:
         uses: Halimatcd/central-sec-script@main
         with:
           image_name: ${{ env.IMAGE_TAG }}
+          token: ${{ secrets.SECURITY_TOKEN }}
