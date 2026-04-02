@@ -15,7 +15,7 @@ jobs:
 
       # This is where YOU (Security) come in
       - name: Run Security Check
-        uses: Halimatcd/central-sec-script@main
+        uses: Halimatcd/SEC@main
         with:
           image_name: ${{ env.IMAGE_TAG }}
-          token: ${{ secrets.SECURITY_TOKEN }}
+   
