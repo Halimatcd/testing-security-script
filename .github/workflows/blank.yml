@@ -17,5 +17,5 @@ jobs:
       - name: Run Security Check
         uses: Halimatcd/SEC@main
         with:
-          image_name: ${{ env.IMAGE_TAG }}
+          image-name: ${{ env.IMAGE_TAG }}
    
